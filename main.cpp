@@ -24,7 +24,7 @@ TEST_CASE("tribonacci recursive values below 1000") {
 
 TEST_CASE("tribonacci iterative equals recursive implementation for values below 1000") {
     for (unsigned i=0; i<15; ++i) {
-        INFO("The argument is ", i);
+        INFO("The argument is " << i);
         CHECK(tribonacci(i) == tribonacci_iter(i));
     }
 }
