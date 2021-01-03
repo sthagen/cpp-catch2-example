@@ -24,17 +24,19 @@ CPMAddPackage(
   GITHUB_REPOSITORY sthagen/cpp-tribonacci
   GIT_TAG 97f0f2664530d03f504c00875361096790b46dc8
 )
-
 CPMAddPackage(
   NAME catch2
-  GITHUB_REPOSITORY sthagen/cpp-test-catch2
-  GIT_TAG 2020.12
+  GITHUB_REPOSITORY catchorg/Catch2
+  VERSION 2.13.4
 )
-
+if(catch2_ADDED)
+  target_include_directories(Catch2 INTERFACE ${CMAKE_CURRENT_BINARY_DIR}/)
+  message("Added ${CMAKE_CURRENT_BINARY_DIR}/ as include")
+endif()
 # ---- Create binary ----
 
 add_executable(catch2_example main.cpp)
-target_link_libraries(catch2_example tribonacci catch2)
+target_link_libraries(catch2_example tribonacci Catch2)
 set_target_properties(catch2_example PROPERTIES CXX_STANDARD 17)
 
 # ---- Enable testing ----
