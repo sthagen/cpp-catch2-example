@@ -18,7 +18,7 @@ TEST_CASE("tribonacci recursive values below 1000") {
     CHECK(tribonacci(10) == 81);
     CHECK(tribonacci(11) == 149);
     CHECK(tribonacci(12) == 274);
-    REQUIRE(tribonacci(13) == 504);
+    CHECK(tribonacci(13) == 504);
     REQUIRE(tribonacci(14) == 927);
 }
 
