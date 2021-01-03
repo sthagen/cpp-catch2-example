@@ -29,10 +29,7 @@ CPMAddPackage(
   GITHUB_REPOSITORY catchorg/Catch2
   VERSION 2.13.4
 )
-if(catch2_ADDED)
-  target_include_directories(Catch2 INTERFACE ${CMAKE_CURRENT_BINARY_DIR}/)
-  message("Added ${CMAKE_CURRENT_BINARY_DIR}/ as include")
-endif()
+
 # ---- Create binary ----
 
 add_executable(catch2_example main.cpp)
