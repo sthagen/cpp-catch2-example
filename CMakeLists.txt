@@ -22,7 +22,7 @@ include(${CPM_DOWNLOAD_LOCATION})
 CPMAddPackage(
   NAME tribonacci
   GITHUB_REPOSITORY sthagen/cpp-tribonacci
-  GIT_TAG 97f0f2664530d03f504c00875361096790b46dc8
+  GIT_TAG 2020.12
 )
 CPMAddPackage(
   NAME catch2
