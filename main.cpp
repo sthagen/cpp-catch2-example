@@ -1,6 +1,6 @@
 #define CATCH_CONFIG_MAIN
 
-#include <catch.hpp>
+#include <catch2/catch.hpp>
 #include <tribonacci.hpp>
 
 TEST_CASE("tribonacci recursive values below 1000") {
